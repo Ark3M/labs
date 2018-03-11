@@ -8,24 +8,23 @@ int main()
 {
 
     setlocale( LC_ALL,"Russian" );
-    //буду использовать vector для простоты
-
+    
     int n;
-    cout<<"Задайте размер массива : ";
+    cout << "Задайте размер массива : ";
     cin >> n;
     vector<int> mas(n);
-    cout<<"Введите элементы массива :"<<endl;
+    cout << "Введите элементы массива :" << endl;
     for(int i = 0; i < n; i++){
         cin >> mas[i];
-        cout<<mas[i]<<' ';
+        cout << mas[i] << ' ';
     }
-    cout<<endl;
+    cout << endl;
 
     if(find_plus(mas)){
-        cout<<"Все элементы массива положительные!"<<endl;
+        cout << "Все элементы массива положительные!" << endl;
     }
     else{
-        cout<<"Не все элементы массива положительные."<<endl;
+        cout << "Не все элементы массива положительные." << endl;
     }
 
     system("pause");
