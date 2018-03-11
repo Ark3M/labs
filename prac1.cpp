@@ -19,7 +19,7 @@ int main(){
     setlocale( LC_ALL,"Russian" );
 
     int k,n;
-    cout<<"Введите число k : ";
+    cout << "Введите число k : ";
     cin >> k;
     cout << endl << "Введите число n : ";
     cin >> n;
