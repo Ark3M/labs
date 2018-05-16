@@ -1,22 +1,22 @@
 #include <iostream>
 using namespace std;
 
-// функция, которая будет передаваться в основную функцию
+// С„СѓРЅРєС†РёСЏ, РєРѕС‚РѕСЂР°СЏ Р±СѓРґРµС‚ РїРµСЂРµРґР°РІР°С‚СЊСЃСЏ РІ РѕСЃРЅРѕРІРЅСѓСЋ С„СѓРЅРєС†РёСЋ
 template <typename T, typename S>
 S myfunc(S start,T numb)
 {
 	if (numb>0) return start+1; else return start;
 }
 
-// лямбда-функция
+// Р»СЏРјР±РґР°-С„СѓРЅРєС†РёСЏ
 auto g = [](auto s,auto n){ return myfunc(s,n); };
 
-// основная функция в которую передается массив и функция
+// РѕСЃРЅРѕРІРЅР°СЏ С„СѓРЅРєС†РёСЏ РІ РєРѕС‚РѕСЂСѓСЋ РїРµСЂРµРґР°РµС‚СЃСЏ РјР°СЃСЃРёРІ Рё С„СѓРЅРєС†РёСЏ
 template <typename S,typename T,typename F>
 S mainfunc(T mas[], int size,F f)
 {
 	S res = 0;
-	// для всех элементов массива вызываем func с параметром res
+	// РґР»СЏ РІСЃРµС… СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° РІС‹Р·С‹РІР°РµРј func СЃ РїР°СЂР°РјРµС‚СЂРѕРј res
 	for (int i=0;i<size;i++) res = f(res,mas[i]);
 	return res;
 }
